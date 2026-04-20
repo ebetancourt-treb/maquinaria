@@ -11,14 +11,8 @@ class AdminUserSeeder extends Seeder
     {
         $admin = User::firstOrCreate(
             ['email' => 'admin@maquinaria.test'],
-            [
-                'name'     => 'Administrador',
-                'password' => bcrypt('password'),
-                'puesto'   => 'Administrador del Sistema',
-                'activo'   => true,
-            ]
+            ['name'=>'Administrador','password'=>bcrypt('password'),'puesto'=>'Administrador del Sistema','activo'=>true]
         );
-
         $admin->assignRole('admin');
     }
 }

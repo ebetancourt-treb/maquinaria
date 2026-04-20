@@ -7,16 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Marca extends Model
 {
     protected $fillable = ['nombre', 'activo'];
-
     protected $casts = ['activo' => 'boolean'];
-
-    public function maquinarias()
-    {
-        return $this->hasMany(Maquinaria::class);
-    }
-
-    public function scopeActivos($query)
-    {
-        return $query->where('activo', true);
-    }
+    public function maquinarias() { return $this->hasMany(Maquinaria::class); }
+    public function scopeActivos($query) { return $query->where('activo', true); }
 }
