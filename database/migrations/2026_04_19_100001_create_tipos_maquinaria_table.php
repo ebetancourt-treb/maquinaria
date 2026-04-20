@@ -17,5 +17,7 @@ return new class extends Migration {
             $table->unique('prefijo_id');
         });
     }
-    public function down(): void { Schema::dropIfExists('tipos_maquinaria'); }
+    public function down(): void { 
+        Schema::dropIfExists('tipos_maquinaria'); 
+        }
 };
